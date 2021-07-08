@@ -37,7 +37,7 @@ body{
     background: url(../img/pattern.png);
 }
 .wrap{
-    width: 100%;
+    width: 1200px;
     margin: 0px auto;
 }
 .gear, .icon{
@@ -65,13 +65,47 @@ body{
     overflow: hidden;
     transition: all 300ms;
 }
+.logo:hover{
+    border-radius: 2px;
+    color: black;
+    background-color: #ccc;
+
+
+}
 .logo .gear{
     display: block;
     float: left;
     font-size: 30px;
     margin-top: 8px;
     margin-left: 26px;
+    animation-name: rotate-gear;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
 }
+@keyframes rotate-gear{
+    from{
+        transform: rotateZ(0deg);
+    }
+    to{
+        transform: rotateZ(360deg) ;
+    }
+}
+.logo:hover .gear{
+    animation: from_bellow 500ms linear;
+}
+@keyframes from_bellow{
+    0%{
+        transform: translateY(0%);
+    }
+    50%{
+        transform: translateY(200%);
+    }
+    100%{
+        transform: translateY(0%);
+    }
+}
+
 .logo h3{
     display: block;
     float: right;
@@ -81,7 +115,17 @@ body{
     margin-right: 65px;
     
 }
-
+.logo:hover h3{
+    animation: from_right 300ms linear;
+}
+@keyframes from_right{
+    from{
+        transform: translateX(200%);
+    }
+    to{
+        transform: translateX(0%);
+    }
+}
 .menu{
     float: right;
     height: 70px;
@@ -115,8 +159,16 @@ body{
     background: url("../img/bakbaner.png");
     background-position: -200px -200px;
     margin: 20px auto;
+    animation: back_banner 10s linear;
+    overflow: hidden;
     
 }
+@keyframes back_banner{
+    0%{
+        background-position: 0px 0px;
+    }
+}
+
 
 
 .info .banner h1{
@@ -130,7 +182,30 @@ body{
     text-shadow:2px 2px 5px black ;
     font-size: 45px;
     letter-spacing: 3px;
+    animation: show_text 5s linear;
 
+}
+@keyframes show_text{
+    0%{
+        transform: translateX(-600%) scale(5, 5);
+        opacity: 1;
+    }
+    50%{
+        transform: translateX(600%) scale(5, 5);
+        opacity: 1;
+    }
+    75%{
+        transform: translateX(-600%) scale(5, 5);
+        text-shadow: none;
+        color: transparent;
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0%) scale(1, 1);
+        text-shadow:2px 2px 5px black ;
+        color: white;
+        opacity: 1;
+    }
 }
 /*Cars*/
 .card {
@@ -139,17 +214,35 @@ body{
     border: 1px solid #ccc;
     box-shadow: 1px 1px 2px #ddd;
     overflow: hidden;
-    margin-left: 4%;
+    margin-left: 2%;
     margin-top: 40px;
+    margin-bottom: 40px;
     float: left;
     background-color: white;
     cursor: pointer;
-    transition: all 200ms;
+    transition: all 300ms;
+}
+.card:hover{
+    background: black;
 }
 .card .icon{
     font-size: 50px;
     text-align: center;
     margin-top: 30px;
+    transition: all 300ms;
+}
+.card:hover .icon{
+    font-size: 70px;
+    color: #37bcf9;
+    animation: show_icon 300ms linear;
+}
+@keyframes show_icon{
+    from{
+        transform: translateY(-200%);
+    }
+    to{
+        transform: translateY(0%);
+    }
 }
 .card .category  {
     color: #00538c;
@@ -158,13 +251,45 @@ body{
     font-family: 'Trebuchet MS';
     font-weight: bold;
     font-size: 21px;
+    transition: all 300ms;
+}
+.card:hover .category{
+    color: white;
+    animation: show_category 400ms linear;
+
+}
+@keyframes show_category{
+    from{
+        transform: translateY(-300%);
+        color: black;
+    }
+    to{
+        transform: translateY(0%);
+        color: rgb(255, 255, 255);
+    }
 }
 .card .description {
     font-family: 'Trebuchet MS';
     color: #00538c;
     text-align: center;
     margin-top: 30px;
+    transition: all 300ms;
   
+}
+.card:hover .description{
+    color: white;
+    animation: show_description 400ms linear;
+
+}
+@keyframes show_description{
+    from{
+        transform: translateX(-300%) ;
+        color: black;
+    }
+    to{
+        transform: translateX(0%) ;
+        color: rgb(255, 255, 255);
+    }
 }
 /*Lateral*/
 .lateral{
@@ -172,7 +297,7 @@ body{
     float: right;
     width: 300px;
     height: 1200px;
-    margin-top: 80px;
+    margin-top: -8px;
     margin-right: 10px;
     font-family: 'Trebuchet MS';
 }
@@ -270,15 +395,7 @@ body{
 .login input[type="password"]:focus{
     color: #555;
     box-shadow: 1px 1px 1px gray inset;
-    
 }
-
-
-
-
-
-
-
 .login input[type="submit"],
 .login input[type="reset"]{
     text-align: center;
@@ -323,93 +440,141 @@ body{
     margin-top: 10px;
     margin-bottom: 20px;
 }
+.social .overlay{
+    display: block;
+    height: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-shadow: 0px 0px 1px #ccc;
+    border:3px solid rgb(255, 255, 255) ;
+    box-shadow: 0px 0px 4px #ccc;
+    background: #f4f4fE;
+    position: absolute;
+    padding: 5px;
+    margin-left: 70px;
+    margin-top: -52px;
+    transform: translateX(-80%);
+    opacity: 0;
+    transition: all 400ms;
+}
+.social div:hover .overlay{
+    opacity: 1;
+    transform: translateX(0%);
+}
 
 /*Articulos*/
-.articles {
-    position: relative;
-    
-    margin-top: 495px;
-    width: 65%;
-    height: 1200px;
-    margin-left: 20px;
-    
+#articles {
+    width: 860px;
+    float: left;
 }
-.articles h2{
+#articles h2{
     display: block;
-    width: auto;
-    text-align: center;
+    width: 100%;
     height: 75px;
     line-height: 80px;
-    background: url(../img/pxgray.png);
-    text-transform: uppercase;
-    font-family: "BebasNeue";
-     box-shadow: 0px 1px 0px #393d3f,0px 1px 0px #393d3f,1px 2px 0px #393d3f,2px 3px 0px #393d3f,3px 4px 0px #393d3f ;
-    margin-bottom: 20px;
-    font-size: 40px;
-    letter-spacing: 2px;
-    padding-left: 15px;
-    margin-top: -20px;
-    margin-bottom: 15px;
-}
-.articles .data{
-    border: 1px solid #ccc;
-    box-shadow: 1px 1px 1px #ccc;
-    height: auto;
-    background-color: white;
-    margin-top: 35px;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-}
-.articles .fecha{
-float: right;
- background-color: #393d3f;
- color: white;
- height: 40px;
- 
- line-height: 40px;
- 
- border-radius: 0px 0px 0px 5px;
- font-size: 13px;
-}
-.articles .fecha span{
-    
-    margin-left: 10px;
-    margin-right: 10px;
-}
-.articles .titulo_articulo{
-    display: block;
-    color: #00538c;
-    font-weight: bold;
-    text-decoration: none;
-    font-size: 22px;
-    height: 42px;
-    line-height: 40px;
-    margin-left: 10px;
-   
-}
-.parrafo{
-    display: block;
-   
-   margin: 10px;
-}
-#blog{
-    display: block;
     text-align: center;
-    text-decoration: none;
-    line-height: 120px;
+    font-family: "BebasNeue";
+    font-size: 40px;
+    font-weight: normal;
+    letter-spacing: 2px;
+    background: url(../img/pxgray.png), white;
+    text-transform: uppercase;
+     box-shadow: 0px 1px 0px #393d3f,0px 1px 0px #393d3f,1px 2px 0px #393d3f,2px 3px 0px #393d3f,3px 4px 0px #393d3f ;
+    margin: 0px auto;
+    margin-top: 20px;
+    margin-bottom: 15px ;
+
+}
+#articles article{
+    width: 100%;
+    height: auto;
     border: 1px solid #ccc;
-    height: 120px;
-    background-color: white;
+    margin: 40px auto;
+    padding: 10px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background: white;
+    color: rgb(0, 0, 0);
+    box-shadow: 1px 1px 1px #ddd;
+}
+#articles article h4{
+    display: block;
+    font-size: 23px;
+    margin: 3px;
+}
+#articles article h4 a{
+    text-decoration:none ;
+    color: #00538c;
+}
+#articles article h4 a:hover{
+    text-decoration: underline;
+}
+#articles .data{
+    float: right;
+    background: #393d3f;
+    color: white;
+    line-height: 30px;
+    margin: -10px;
+    padding: 4px;
+    font-size: 13px;
+    border-radius: 0px 0px 0px 5px;
+
+}
+#articles .data span{
+    margin: 6px;
+}
+
+#articles article p{
+    margin-top:10px ;
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+
+#blog{
+    height: 100px;
     margin-top: 35px;
+    line-height: 100px;
+    text-align: center;
+    transition: all 1s;
     
 }
 #blog a{
-    text-align: center;
-    text-decoration: none;
-    text-transform: uppercase;
-    color: #00538c;
-    font-size: 40px;
+    display: block;
     font-family: "BebasNeue";
-    letter-spacing: 2px;
+    font-size: 40px;
+    letter-spacing: 3px;
+    color: #00538c;
+    text-decoration: none;
+    transition: all 300ms;
+    
+}
+#blog:hover{
+    background-color: #555;
+    border: 10px solid #37bcf9;
+    border-radius: 240px;
+    box-shadow: 0px 0px 10px gray;
+    animation: blink 10s infinite linear
+
+}
+#blog:hover a{
+    color: white;
+    text-shadow: 1px 1px 1px black, 1px 2px 1px black,1px 3px 1px black,1px 4px 1px black,1px 5px 1px black,1px 6px 1px black ;
+    
+}
+
+@keyframes blink{
+    0%{
+        border: 10px solid #37bcf9;
+    }
+    25%{
+        border: 10px solid green;
+    }
+    75%{
+        border: 10px solid yellow:
+    }
+    100%{
+        border: 10px solid #37bcf9;
+    }
 }
 /*Footer*/
 
@@ -463,6 +628,13 @@ footer a{
 #footer ul li a{
     display: block;
     height: 40px;
+    transition: all 300ms;
+}
+#footer ul li:hover a{
+    padding-left: 40px;
+    color: white;
+    width: 100%;
+
 }
 #footer iframe{
     width: 100%;
