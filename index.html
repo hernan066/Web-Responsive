@@ -1,37 +1,39 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./style/style.css" />
     <link rel="shortcut icon" href="img/supertux.png" type="image/x-icon" />
     <title>Maquetacion avanzada</title>
-  </head>
-  <body>
+</head>
+
+<body>
     <!--Cabecera-->
     <header class="header">
-      <div class="wrap">
-        <div class="logo">
-          <span class="gear"> S </span>
-          <h3>BLOG</h3>
+        <div class="wrap">
+            <div class="logo">
+                <span class="gear"> S </span>
+                <h3>BLOG</h3>
+            </div>
+            <nav class="menu">
+                <ul>
+                    <li><a href="#">INICIO</a></li>
+                    <li><a href="#">BLOG</a></li>
+                    <li><a href="#">FORMACION</a></li>
+                    <li><a href="#">CONTACTO</a></li>
+                </ul>
+            </nav>
         </div>
-        <nav class="menu">
-          <ul>
-            <li><a href="#">INICIO</a></li>
-            <li><a href="#">BLOG</a></li>
-            <li><a href="#">FORMACION</a></li>
-            <li><a href="#">CONTACTO</a></li>
-          </ul>
-        </nav>
-      </div>
     </header>
 
     <!--Fin cabecera-->
-    
+
     <section class="wrap">
         <section class="info">
-            
+
             <!--Inicio Banner-->
             <div class="banner">
                 <h1>Cursos de desarrollo web con Hernan Moneta</h1>
@@ -73,56 +75,233 @@
                     Aprende a montar y administrar base de datos.
                 </p>
             </div>
-            
+
         </section>
         <!--Fin tarjetas-->
 
-         <!--Lateral-->
+        <!--Lateral-->
 
-      <aside class="lateral">
+        <aside class="lateral">
             <h3>Buscar</h3>
             <div class="buscar">
-            <form action="">
-                <input type="text" />
-                <input type="button" value="L" class="icon">
-            </form>
+                <form action="">
+                    <input type="text" />
+                    <input type="button" value="L" class="icon">
+                </form>
             </div>
             <h3>Login</h3>
             <div class="login">
-            <form>
-                <label id="user" class="icon">U</label>
-                <input type="email" name="" id="" />
+                <form>
+                    <label id="user" class="icon">U</label>
+                    <input type="email">
 
-                <label id="password" class="icon">w</label>
-                <input type="password" name="" id="" />
+                    <label id="password" class="icon">w</label>
+                    <input type="password">
 
-                <input type="submit" value="Entrar" />
-                <input type="submit" value="Limpiar" />
+                    <input type="submit" value="Entrar" />
+                    <input type="reset" value="Limpiar" />
 
-                <a href="#">Registrate aqui</a>
-                <a href="#">Has olvidado tu contraseña</a>
-            </form>
+                    <a href="#" id="registro">Registrate aqui</a>
+                    <a href="#">Has olvidado tu contraseña</a>
+                </form>
             </div>
 
             <h3>Redes sociales</h3>
             <div class="social">
-            <div class="twiter">
-                <a href="#" class="icon">t</a>
-            </div>
-            <div class="youtube">
-                <a href="#" class="icon">y</a>
-            </div>
-            <div class="facebook">
-                <a href="#" class="icon">f</a>
-            </div>
+                <div class="twiter">
+                    <a href="#" class="icon">t</a>
+                </div>
+                <div class="youtube">
+                    <a href="#" class="icon">y</a>
+                </div>
+                <div class="facebook">
+                    <a href="#" class="icon">f</a>
+                </div>
             </div>
             <h3>Colaboradores</h3>
             <div class="sponsors"></div>
-      </aside>
-     <!--Fin lateral-->
-    
-    
-    
+        </aside>
+        <!--Fin lateral-->
+
+        <!--Articulos-->
+        <section class="articles">
+            <h2>Ultimos articulos</h2>
+            <article>
+                <div class="data">
+                    <div class="fecha">
+                        <span>
+                            Fecha: 12 dic
+                        </span>
+                        <span>
+                            Categoria Pruebas
+                        </span>
+                    </div>
+                    <a href="#" class="titulo_articulo">Titulo del articulo</a>
+                    <p class="parrafo">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid quo consectetur sed, pariatur
+                        cupiditate repellat mollitia laudantium dicta debitis ipsum numquam laboriosam eum asperiores
+                        iste rem ea. Voluptatum, saepe culpa.
+                    </p>
+                </div>
+            </article>
+            <article>
+                <div class="data">
+                    <div class="fecha">
+                        <span>
+                            Fecha: 12 dic
+                        </span>
+                        <span>
+                            Categoria Pruebas
+                        </span>
+                    </div>
+                    <a href="#" class="titulo_articulo">Titulo del articulo</a>
+                    <p class="parrafo">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid quo consectetur sed, pariatur
+                        cupiditate repellat mollitia laudantium dicta debitis ipsum numquam laboriosam eum asperiores
+                        iste rem ea. Voluptatum, saepe culpa.
+                    </p>
+                </div>
+            </article>
+            <article>
+                <div class="data">
+                    <div class="fecha">
+                        <span>
+                            Fecha: 12 dic
+                        </span>
+                        <span>
+                            Categoria Pruebas
+                        </span>
+                    </div>
+                    <a href="#" class="titulo_articulo">Titulo del articulo</a>
+                    <p class="parrafo">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid quo consectetur sed, pariatur
+                        cupiditate repellat mollitia laudantium dicta debitis ipsum numquam laboriosam eum asperiores
+                        iste rem ea. Voluptatum, saepe culpa.
+                    </p>
+                </div>
+            </article>
+            <article>
+                <div class="data">
+                    <div class="fecha">
+                        <span>
+                            Fecha: 12 dic
+                        </span>
+                        <span>
+                            Categoria Pruebas
+                        </span>
+                    </div>
+                    <a href="#" class="titulo_articulo">Titulo del articulo</a>
+                    <p class="parrafo">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid quo consectetur sed, pariatur
+                        cupiditate repellat mollitia laudantium dicta debitis ipsum numquam laboriosam eum asperiores
+                        iste rem ea. Voluptatum, saepe culpa.
+                    </p>
+                </div>
+            </article>
+            <article>
+                <div class="data">
+                    <div class="fecha">
+                        <span>
+                            Fecha: 12 dic
+                        </span>
+                        <span>
+                            Categoria Pruebas
+                        </span>
+                    </div>
+                    <a href="#" class="titulo_articulo">Titulo del articulo</a>
+                    <p class="parrafo">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid quo consectetur sed, pariatur
+                        cupiditate repellat mollitia laudantium dicta debitis ipsum numquam laboriosam eum asperiores
+                        iste rem ea. Voluptatum, saepe culpa.
+                    </p>
+                </div>
+            </article>
+            <article>
+                <div class="data">
+                    <div class="fecha">
+                        <span>
+                            Fecha: 12 dic
+                        </span>
+                        <span>
+                            Categoria Pruebas
+                        </span>
+                    </div>
+                    <a href="#" class="titulo_articulo">Titulo del articulo</a>
+                    <p class="parrafo">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid quo consectetur sed, pariatur
+                        cupiditate repellat mollitia laudantium dicta debitis ipsum numquam laboriosam eum asperiores
+                        iste rem ea. Voluptatum, saepe culpa.
+                    </p>
+                </div>
+            </article>
+            <article id="blog">
+                <a href="#">Ir al blog</a>
+            </article>
+        </section>
+        <!--Fin Articulos-->
+
     </secction>
-  </body>
+    
+    <footer id="footer">
+            <div class="wrap">
+                <div id="menu_footer">
+                    <H5>MENU</H5>
+                    <ul>
+                        <li>
+                            <a href="#">INICIO</a>
+                        </li>
+                        <li>
+                            <a href="#">BLOG</a>
+                        </li>
+                        <li>
+                            <a href="#">FORMACION</a>
+                        </li>
+                        <li>
+                            <a href="#">CONTACTO</a>
+                        </li>
+                    </ul>
+
+                </div>
+                <div id="location">
+                    <h5>¿Donde estamos?</h5>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2847.7204918802963!2d-60.779251089252874!3d-32.918434100105635!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95b64d78404f155f%3A0xbab623f26d9f9371!2sFisherton%20Plaza!5e1!3m2!1ses!2sar!4v1625727898432!5m2!1ses!2sar"
+                        width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+                <div id="informacion">
+                    <h5>Desarollado con</h5>
+                    <p>
+                        <img src="./img/html5-badge-h-css3-graphics-multimedia-performance-semantics.png" alt="">
+                    </p>
+                    <h5>Optimizado para</h5>
+                    <p id="browsers">
+                        <a href="">
+                            <img src="./img/firefox-icon.png" alt="">
+                        </a>
+                        <a href="">
+                            <img src="./img/chrome.png" alt="">
+                        </a>
+                        <a href="">
+                            <img src="./img/Opera_256x256.png" alt="">
+                        </a>
+                        <a href="">
+                            <img src="./img/safari.png" alt="">
+                        </a>
+                        <a href="">
+                            <img src="./img/android.png" alt="">
+                        </a>
+                        <a href="">
+                            <img src="./img/ios.png" alt="">
+                        </a>
+                    <h5>Autor</h5>
+                    <p>&copy; Hernan Moneta</p>
+
+                    </p>
+                </div>
+            </div>
+        </footer>
+
+
+</body>
+
 </html>
