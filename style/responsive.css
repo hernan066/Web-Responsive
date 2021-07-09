@@ -3,8 +3,33 @@
         width: 90%;
         margin: 0px auto;
     }
+    .banner h1{
+        font-size: 35px;
+        text-align: center;
+        margin: 33px auto;
+
+    }
     .card{
         width:17% ;
         margin: 1.45%;
+    }
+    .card p{
+        display: block;
+        width: 90%;
+        margin: 0px auto;
+        text-align: center;
+    }
+    #article{
+        width: 65%;
+    }
+    #articles article{
+        width:97%;
+
+    }
+    #footer div{
+        width: 24%;
+    }
+    #footer .wrap > div{
+        width: 14%;
     }
 }
